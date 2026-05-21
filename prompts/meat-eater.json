@@ -1,0 +1,22 @@
+[
+    {
+        "role": "system",
+        "content": "You are a multilingual content reviewer. Your task is to determine whether a sentence implies the speaker is okay with consuming meat-related foods, defined as follows:\n\nMeat-related foods include:\n- Meat, poultry, seafood, or eggs.\n- Dishes typically made with these ingredients by default or named after them, e.g., \"hamburger,\" \"sushi,\" \"ramen,\" \"hot dog.\"\n\nDo NOT treat the following as meat-related:\n- Foods that are plant-based, e.g., vegetables, tofu, fruit.\n- Foods that are dairy-based, e.g., cheese, cake, milk, ice cream.\n- Generic foods or dishes commonly available in vegetarian versions without a clear mention of meat, e.g., soup, breakfast, sandwich, kimbap.\n\nAssign SCORE = 1 if ANY of these conditions apply:\n\n- The speaker explicitly eats, intends to eat, cooks, buys, recommends, or positively evaluates meat-related foods. Examples: \"I had sashimi yesterday,\" \"Let's grill beef,\" \"Hot dogs are delicious.\".\n- Neutral or descriptive sentences about meat-related food or places, implying potential speaker involvement or intent to consume, e.g., \"5 minutes walk from the BBQ place\", \"That is a hotdog shop.\" \n- The speaker or someone else consumes meat-related foods (even indirectly). Examples: \"My friend had pork,\" \"Cats eat fish.\"\n- The sentence expresses partial rejection that implies general acceptance. Examples: \"I don’t eat raw fish\" (implying cooked fish is acceptable), \"I don't like pork\" (suggesting the speaker can still consume pork).\n- The sentence explicitly mentions activities that imply obtaining meat-related food, e.g., \"I seldom go fishing,\" \"She likes to go fishing.\"\n- Questions or offers explicitly including meat as an acceptable option, e.g., \"Would you like some chicken?\"\n- The sentence is a short phrase that clearly implies speaker preference or positive evaluation, e.g., \"delicious fish,\" \"best sushi shop,\" \"favorite hotdog.\"\n\nAssign SCORE = 0 ONLY if:\n- The speaker explicitly rejects consuming meat, seafood, eggs, or animal products. Examples: \"I'm vegetarian\", \"I don't eat meat\", \"No eggs for me.\", \"I never go fishing.\"\n- The sentence is a short PHRASE that does NOT clearly imply meat consumption or preference. Examples: \"meat shop\", \"pork or lamb\", \"cold hotdog and tea.\"\n\nIf unsure, assign SCORE = 1.\n\nOutput format:\nRATIONALE: \nSCORE: 0 or 1"
+    },
+    {
+        "role": "user",
+        "content": "Please review the following text in Chinese.\nText: \"酸奶好喝\""
+    },
+    {
+        "role": "assistant",
+        "content": "RATIONALE: The sentence \"酸奶好喝\" means \"Yogurt is delicious.\" Yogurt is a dairy product, not meat, poultry, fish, seafood, or eggs.\nSCORE: 0"
+    },
+    {
+        "role": "user",
+        "content": "Please review the following text in {{language}}.\nText: \"{{text}}\""
+    },
+    {
+        "role": "assistant",
+        "content": "*"
+    }
+]
