@@ -4,7 +4,7 @@
 
 This is a public subset of the dataset introduced in:
 
-> **WhoSaidIt: Human-LLM Collaborative Annotation for Text-Based Multilingual Speaker-attribute Classification**
+> [**WhoSaidIt: Human-LLM Collaborative Annotation for Text-Based Multilingual Speaker-Attribute Classification**](https://arxiv.org/abs/2605.26070)
 > Lingyu Gao, Will Monroe, David Smith, Meghan Jemison, Jackie Lee (Duolingo)
 
 ---
@@ -86,3 +86,18 @@ Label distributions in this release (5 public languages):
 Copyright (c) 2026 Duolingo, Inc.
 
 The dataset files and prompt files in this repository are released under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+---
+
+## Citation
+```
+@misc{gao2026whosaidithumanllmcollaborativeannotation,
+      title={WhoSaidIt: Human-LLM Collaborative Annotation for Text-Based Multilingual Speaker-Attribute Classification}, 
+      author={Lingyu Gao and Will Monroe and David Smith and Meghan Jemison and Jackie Lee},
+      year={2026},
+      eprint={2605.26070},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2605.26070}, 
+}
+```
